@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/mystyle.css" rel="stylesheet">
+		<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+	</head>
+	<body>
+	
+		<div class="container">
+		<!--head start-->
+			<div class="row">
+				<div class="col-sm-16 col-sm-offset-1">
+					<nav class="navbar navbar-default head">
+					  <div class="container-fluid">
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynav" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+						  <a class="navbar-brand" href="#">河大考勤</a>
+						</div>
+						<div class="collapse navbar-collapse" id="mynav">
+						  <ul class="nav navbar-nav">
+							<li class="active"><a href="#">添加学生<span class="sr-only">(current)</span></a></li>
+							<li><a href="#">学生考勤</a></li>
+							<li><a href="#">我的信息</a></li>
+							<li class="dropdown">
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我的班级<span class="caret"></span></a>
+							  <ul class="dropdown-menu">
+								<li><a href="#">14-1</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">14-2</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">14-3</a></li>
+							  </ul>
+							</li>
+						  </ul>
+						  <form class="navbar-form navbar-left" role="search">
+							<div class="form-group">
+							  <input type="text" class="form-control" placeholder="考勤查询请输入班级名称">
+							</div>
+							<button type="submit" class="btn btn-default">查询</button>
+						  </form>
+						  <ul class="nav navbar-nav navbar-right">
+							<li class="navbar-right"><a href="#">个人中心</a></li>
+							<li style="margin-right:-30px;"><a href="#"><img class="media-object" src="images/07.png"></a></li>
+						  </ul>
+						</div>
+					  </div>
+					</nav>
+				</div>
+			</div>
+			<!--head end-->
+			
+			
+			<!--content start-->
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="col-sm-16 col-sm-offset-1">
+						<div>
+
+						  <ul class="nav nav-tabs" role="tablist">
+							
+							<li role="presentation" class="dropdown">
+								
+							  <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我的班级<span class="caret"></span></a>
+							  <ul class="dropdown-menu">
+								<li><a id="first" href="#14-1" class="active" aria-controls="settings" role="tab" data-toggle="tab">14-1</a></li>
+								
+								<li><a href="#14-2" aria-controls="settings" role="tab" data-toggle="tab">14-2</a></li>
+								
+								<li><a href="#14-3" aria-controls="settings" role="tab" data-toggle="tab">14-3</a></li>
+							  </ul>
+								
+							</li>
+							<li role="presentation" class="dropdown">
+								
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我的班级<span class="caret"></span></a>
+							  <ul class="dropdown-menu">
+								<li><a href="#14-1" aria-controls="settings" role="tab" data-toggle="tab">14-1</a></li>
+								
+								<li><a href="#14-2" aria-controls="settings" role="tab" data-toggle="tab">14-2</a></li>
+								
+								<li><a href="#14-3" aria-controls="settings" role="tab" data-toggle="tab">14-3</a></li>
+							  </ul>
+								
+							</li>
+							<li role="presentation" class="dropdown">
+								
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我的班级<span class="caret"></span></a>
+							  <ul class="dropdown-menu">
+								<li><a href="#14-1" aria-controls="settings" role="tab" data-toggle="tab">14-1</a></li>
+								
+								<li><a href="#14-2" aria-controls="settings" role="tab" data-toggle="tab">14-2</a></li>
+								
+								<li><a href="#14-3" aria-controls="settings" role="tab" data-toggle="tab">14-3</a></li>
+							  </ul>
+								
+							</li>
+						  </ul>
+
+						  <div class="tab-content">
+							<div role="tabpanel" class="tab-pane fade in active" id="14-1">
+								<br><br>
+								<div class="panel panel-default">
+									  <div class="panel-heading">
+										<div class="row" >
+											<div class="col-md-1">
+												学号
+											</div>
+											<div class="col-md-1" >
+												姓名
+											</div>
+											<div class="col-md-10">
+												考勤(<span style="color:red;">红色标签表示没到人名单</span>)
+											</div>
+										</div>
+									  </div>
+									  <div class="panel-body">
+										<ul class="list-group">
+										  <li class="list-group-item">
+											<div class="row">
+												<div class="col-md-1">1427152073</div>
+												<div class="col-md-1" style="margin-left:50px;">李贤</div>
+												<input type="hidden" value="李贤" id="name" />
+												<input type="hidden" value="1427152073" id="number" />
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												
+											</div>
+										  </li>
+										  <li class="list-group-item">
+											<div class="row">
+												<div class="col-md-1">1427152073</div>
+												<div class="col-md-1" style="margin-left:50px;">李贤</div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												
+											</div>
+										  </li>
+										  <li class="list-group-item">
+											<div class="row">
+												<div class="col-md-1">1427152073</div>
+												<div class="col-md-1" style="margin-left:50px;">李贤</div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												
+											</div>
+										  </li>
+										  <li class="list-group-item">
+											<div class="row">
+												<div class="col-md-1">1427152073</div>
+												<div class="col-md-1" style="margin-left:50px;">李贤</div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												
+											</div>
+										  </li>
+										  <li class="list-group-item">
+											<div class="row">
+												<div class="col-md-1">1427152073</div>
+												<div class="col-md-1" style="margin-left:50px;">李贤</div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												
+												<div class="col-md-1"><span class="label label-danger">2016-6-30</span></div>
+												
+												
+											</div>
+										  </li>
+										</ul>
+									  </div>
+									</div>
+									
+								
+								
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="14-2">
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="14-3">
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="14-4">
+							</div>
+						  </div>
+
+					</div>
+					
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	
+		<div class="modal fade" id="myalert" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="exampleModalLabel">New message</h4>
+			  </div>
+			  <div class="modal-body">
+				<form class="form-horizontal" id="form_li" action="" method="post">
+				  <div class="form-group">
+					<label for="dtp_input2" class="col-md-3 control-label">请选择日期</label>
+					<div class="input-group date form_date col-md-5" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+						<input class="form-control" size="16" type="text" value="" readonly>
+						<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+						<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+					</div>
+					<input type="hidden" id="class" name="class" value="" /><br/>
+					</div>
+				</form>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-primary btn-sm" name="submit" onclick="document.getElementById('form_li').submit();">确认</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		<div class="modal fade" id="myalert_remove" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="remove">message</h4>
+			  </div>
+			  <div class="modal-body">
+			  <div class="panel panel-default">
+				<div class="panel-heading">
+					<h5>请选择取消项目：</h5>
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal" id="form_li2">
+				  <div class="checkbox">
+					<label class="col-md-3 control-label">
+						<input type="checkbox" value=""/><span class="label label-danger">2016-6-30</span>
+					</label>
+					<label class="col-md-3 control-label">
+						<input type="checkbox" value=""/><span class="label label-danger">2016-6-30</span>
+					</label>
+					<label class="col-md-3 control-label">
+						<input type="checkbox" value=""/><span class="label label-danger">2016-6-30</span>
+					</label>
+					<label class="col-md-3 control-label">
+						<input type="checkbox" value=""/><span class="label label-danger">2016-6-30</span>
+					</label>
+					<label class="col-md-3 control-label">
+						<input type="checkbox" value=""/><span class="label label-danger">2016-6-30</span>
+					</label>
+					<label class="col-md-3 control-label">
+						<input type="checkbox" value=""/><span class="label label-danger">2016-6-30</span>
+					</label>
+					<label class="col-md-3 control-label">
+						<input type="checkbox" value=""/><span class="label label-danger">2016-6-30</span>
+					</label>
+				</form>
+				</div>
+			  </div>
+				
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-primary btn-sm" name="submit" onclick="document.getElementById('form_li2').submit();">确认</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		</div>
+		
+		<div class="modal fade" id="myalert_update" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="update_title">New message</h4>
+			  </div>
+			  <div class="modal-body">
+				<form class="form-horizontal" id="form_li" action="" method="post">
+				 <div class="form-group has-warning">
+					<label for="upfile" class="col-sm-4 control-label">学生表格上传：</label>
+					<div class="col-sm-7">
+					<input type="file" id="upfile" style="width:100%;"/>
+					<input type="hidden" id="class" name="class" value="" /><br/>
+					 <p class="help-block">请上传xml格式的学生名单</p>
+					 </div>
+				 </div>
+				</form>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-primary btn-sm" name="submit" onclick="document.getElementById('form_li').submit();">确认</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!--content end-->
+		
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+		<script src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+		<script src="js/my.js"></script>
+	</bodY>
+<html>

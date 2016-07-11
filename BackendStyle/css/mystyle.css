@@ -1,0 +1,30 @@
+.head{
+	background:#bbdbef;
+}
+.base_content li{
+	list-style-type:none;
+	float:left;
+	width:100px;
+	margin-right:20px;
+}
+.ul_content{
+	 
+}
+.btn-position{
+	margin-left:200px;
+}
+.dropdown-year li{
+	background:#ccc;
+	cursor:pointer;
+}
+.dropdown-year li:hover{
+	background:#4B96F2;
+}
+
+#hidden_button{
+	display:none;
+}
+.save_button{
+	margin-left:30px;
+	
+}
