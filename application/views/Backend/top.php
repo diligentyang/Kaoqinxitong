@@ -25,11 +25,11 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="<?php echo site_url("Backend/help");?>">河大考勤</a>
+                        <a class="navbar-brand" href="<?php echo site_url("Backend/index");?>">河大考勤</a>
                     </div>
                     <div class="collapse navbar-collapse" id="mynav">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="<?php echo site_url("backend/index");?>">创建班级<span class="sr-only">(current)</span></a></li>
+                            <li><a href="<?php echo site_url("backend/a_class");?>">创建班级<span class="sr-only">(current)</span></a></li>
                             <li><a href="<?php echo site_url("backend/attendance");?>">学生考勤</a></li>
                             <li><a href="<?php echo site_url("backend/myInformation");?>">我的信息</a></li>
                             <li class="dropdown">

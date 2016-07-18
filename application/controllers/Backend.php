@@ -27,23 +27,22 @@ class Backend extends CI_Controller
         $data["isAssistant"] = $this->session->userdata("isAssistant");
        // var_dump($data);
     }
-    //Help界面
-    function help()
-    {
-        $this->commonData();
-        $top_data=$this->top();
-        $this->load->view("Backend/top",$top_data);
-        $this->load->view("Backend/help");
-        $this->load->view("Backend/foot");
-    }
 
-    //添加学生界面
-    function index()
+    function a_class()
     {
         $this->commonData();
         $top_data=$this->top();
         $this->load->view("Backend/top",$top_data);
         $this->load->view("Backend/index");
+        $this->load->view("Backend/foot");
+    }
+    //Help界面
+    function index()
+    {
+        $this->commonData();
+        $top_data=$this->top();
+        $this->load->view("Backend/top",$top_data);
+        $this->load->view("Backend/help");
         $this->load->view("Backend/foot");
     }
 
@@ -184,7 +183,7 @@ class Backend extends CI_Controller
                 $xls->read($file_name);  //解析文件
                 $arr = $xls->sheets[0]["cells"];
                 // var_dump($xls->sheets[0]);
-                for($i=1;$i<=$xls->sheets[0]["numRows"];$i++){
+                for($i=2;$i<=$xls->sheets[0]["numRows"];$i++){
                     $insertContent = "'".implode("','",$arr[$i])."','$courseID','$assistantID'";
                     $sql = "insert into student(sID,sName,sCourse,sAssistant)values($insertContent)";
                     $this->db->query($sql);
@@ -226,7 +225,7 @@ class Backend extends CI_Controller
             $xls->read($file_name);  //解析文件
             $arr = $xls->sheets[0]["cells"];
             // var_dump($xls->sheets[0]);
-            for($i=1;$i<=$xls->sheets[0]["numRows"];$i++){
+            for($i=2;$i<=$xls->sheets[0]["numRows"];$i++){
                 $insertContent = "'".implode("','",$arr[$i])."','$courseID','$assistantID'";
                 $sql = "insert into student(sID,sName,sCourse,sAssistant)values($insertContent)";
                 $this->db->query($sql);
