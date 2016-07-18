@@ -27,6 +27,15 @@ class Backend extends CI_Controller
         $data["isAssistant"] = $this->session->userdata("isAssistant");
        // var_dump($data);
     }
+    //Help界面
+    function help()
+    {
+        $this->commonData();
+        $top_data=$this->top();
+        $this->load->view("Backend/top",$top_data);
+        $this->load->view("Backend/help");
+        $this->load->view("Backend/foot");
+    }
 
     //添加学生界面
     function index()

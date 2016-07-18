@@ -25,7 +25,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">河大考勤</a>
+                        <a class="navbar-brand" href="<?php echo site_url("Backend/help");?>">河大考勤</a>
                     </div>
                     <div class="collapse navbar-collapse" id="mynav">
                         <ul class="nav navbar-nav">

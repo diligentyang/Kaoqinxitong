@@ -18,6 +18,11 @@
 <script src="BackendStyle/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
 <script src="BackendStyle/js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
 <script src="BackendStyle/js/my.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover();
+    })
+</script>
 <!--foot end-->
 </body>
 <html>
