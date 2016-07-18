@@ -30,9 +30,6 @@ class Backend extends CI_Controller
     //Help界面
     function help()
     {
-        var_dump(urlencode("你好"));
-        var_dump(urldecode("%E4%BD%A0%E5%A5%BD"));
-        exit();
         $this->commonData();
         $top_data=$this->top();
         $this->load->view("Backend/top",$top_data);
