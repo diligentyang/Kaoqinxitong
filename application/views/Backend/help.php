@@ -11,17 +11,15 @@
 						</p>
 						<p>
 							<div class="col-md-11 col-md-offset-1">
-						<a tabindex="0" class="btn btn-sm btn-danger" role="button" data-toggle="popover" data-trigger="focus" style="width:140px;"
-						title="Dismissible popover" 
+						<a tabindex="0" class="btn btn-sm btn-danger" data-html="true" role="button" data-toggle="popover" data-trigger="focus" style="width:140px;"
+						title="创建班级注意事项"
 						data-content=
 						"
-						And here's some amazing content. It's very engaging. Right?
-						And here's some amazing content. It's very engaging. Right?
-						And here's some amazing content. It's very engaging. Right?
-						And here's some amazing content. It's very engaging. Right?
-						And here's some amazing content. It's very engaging. Right?
-						And here's some amazing content. It's very engaging. Right?
-						
+							1.选择对应的年级.<br>
+							2.填写班级名称，例如14-2.<br>
+							3.填写课程名称，例如数据结构.<br>
+							4.填写辅导员名称.<br>
+							以上均为必填项，如果提示辅导员错误，请认真检查辅导员名称，或联系网站管理员!
 						"
 						>创建班级注意事项</a>
 					</div>
