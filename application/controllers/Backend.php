@@ -282,9 +282,9 @@ class Backend extends CI_Controller
                                             <input type="hidden" value="'.site_url("Backend/getRemoveTags").'"  class="removeUrl"/>
                     ';
                 $arr = $this->Backmodel->get_absence($item["sID"],$item["sCourse"]);
-                $output.="<div style='word-wrap:break-word;word-break:break-all;' class=\"col-md-6 col-sm-6 col-xs-12\">";
+                $output.="<div style='' class=\"col-md-6 col-sm-6 col-xs-12\">";
                 foreach($arr["arr_absence"] as $item2){
-                    $output .="<span style='margin-right: 5px;' class='label label-danger'>".substr($item2["sDelDate"],2)."</span>";
+                    $output .="<span style='float:left;margin:5px;' class='label label-danger'>".substr($item2["sDelDate"],2)."</span>";
                 }
                 $output .='</div> <div class="col-md-3 col-sm-3 col-xs-8">
                                                 <button class="add_tag btn btn-primary btn-xs" data-toggle="modal" data-target="#myalert" data-whatever="添加" data-dismiss="李贤" style="width:40px;">添加</button>

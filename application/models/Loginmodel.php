@@ -8,12 +8,27 @@ class Loginmodel extends CI_Model
         $this->load->helper('url');
         $this->load->database();
     }
-
+	
     function get_user_info(){
         $this->get_pdo();
         $username=$this->input->post("username");
         $password=md5($this->input->post("password"));
         $sql="select * from tuser where tName=? and tPassword=?";
+        $res="";
+        $array=array("$username","$password");
+        $stmt=$this->pdo->prepare($sql);
+        $exeres = $stmt->execute($array);
+        if($exeres){
+            $res=$stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+        return $res;
+    }
+	
+	function get_super_info(){
+        $this->get_pdo();
+        $username=$this->input->post("username");
+        $password=md5($this->input->post("password"));
+        $sql="select * from tuser where tName=? and tPassword=? and tPower=10";
         $res="";
         $array=array("$username","$password");
         $stmt=$this->pdo->prepare($sql);

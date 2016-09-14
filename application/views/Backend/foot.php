@@ -1,5 +1,5 @@
 <!--foot start-->
-<div id="footer" class="container" >
+<!--<div id="footer" class="container" >
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <nav class="navbar navbar-default navbar-fixed-bottom" style="background:#191C20;width:90%;margin:0 auto;height:50px;">
@@ -12,7 +12,7 @@
             </nav>
         </div>
     </div>
-</div>
+</div>-->
 <script src="BackendStyle/js/jquery-1.11.1.min.js"></script>
 <script src="BackendStyle/js/bootstrap.min.js"></script>
 <script src="BackendStyle/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>

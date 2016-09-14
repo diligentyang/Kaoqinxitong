@@ -45,7 +45,7 @@
                         <div class="col-md-12">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox"> Remember me
+                                    <input name="super" value="true" type="checkbox"> 是否为超级管理员
                                 </label>
                             </div>
                         </div>
