@@ -29,8 +29,10 @@ class Login extends CI_Controller
 			}else {
 				foreach ($superinfo as $value) {
 					$tID=$value['tID'];
+					$tName = $value['tName'];
 				}
 				$this->session->set_userdata("tID",$tID);
+				$this->session->set_userdata("tName",$tName);
 				$this->session->set_userdata("admin","ok");
 				redirect("Backend/super_index");
 			}

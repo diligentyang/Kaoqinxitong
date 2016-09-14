@@ -40,7 +40,7 @@ class Backmodel extends CI_Model
         return $data;
     }
     function get_student($tID,$class){
-        $sql = "select * from student,course where student.sCourse=course.id and course.tID=$tID and course.cClass='$class'";
+        $sql = "select * from student,course where student.sCourse=course.id and course.tID=$tID and course.cClass='$class' order by sID";
         $res = $this->db->query($sql);
         $data["arr_student"] = $res->result_array();
         return $data;
