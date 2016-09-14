@@ -48,7 +48,7 @@
                             </div>
                             <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                         </form>-->
-                        <iframe id="tianqi" style="margin-top: 10px;margin-left: 10px;" name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=1" width="330" height="35" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                        <!--<iframe id="tianqi" style="margin-top: 10px;margin-left: 10px;" name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=1" width="330" height="35" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>-->
                         <ul class="nav navbar-nav navbar-right">
                             <li class="navbar-right"><a href="#">退出登录</a></li>
                             <li style="margin-right:-30px;"><a href="#"><img class="media-object" src="BackendStyle/images/07.png"></a></li>

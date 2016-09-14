@@ -1,7 +1,7 @@
 		<!--content start-->
 			<div class="row">
 				<div class="col-sm-16 col-sm-offset-1">
-					<br><br><br>
+					
 					<div class="jumbotron">
 						<h3><span class="glyphicon glyphicon-question-sign" style="color:red;"></span>&nbsp&nbsp<span style="color:#ccc">帮助</span></h3>
 						<p>

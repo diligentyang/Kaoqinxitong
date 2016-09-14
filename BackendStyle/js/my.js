@@ -230,8 +230,8 @@ $(document).ready(function(){
     $(".ysy1:first").click();
 
 
-    if($(window).width()<1210){
+    /*if($(window).width()<1210){
         $("#tianqi").hide();
-    }
+    }*/
 })
 
