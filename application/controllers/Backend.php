@@ -21,6 +21,12 @@ class Backend extends CI_Controller
         $this->session->set_userdata("hasStudents","0");*/
     }
 
+	//超级管理员界面
+	function super_index()
+	{
+		$this->load->view("Backend/super_index");
+	}
+	
     //公告数据
     function commonData(){
         $data["tID"] = $this->session->userdata("tID");
