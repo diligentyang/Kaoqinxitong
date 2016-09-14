@@ -12,7 +12,7 @@
 <body>
 
 <div class="container">
-	<div class="col-xs-3">
+	<div class="col-md-3">
           <h4 class="demo-panel-title">年级</h4>
           <select class="form-control select select-primary" data-toggle="select">
             <option value="0">Choose hero</option>
@@ -22,9 +22,9 @@
             <option value="4" selected>X-Men</option>
             <option value="5">Crocodile</option>
           </select>
-    </div> <!-- /.col-xs-3 -->
+    </div> <!-- /.col-md-3 -->
 	
-	<div class="col-xs-3">
+	<div class="col-md-3">
           <h4 class="demo-panel-title">班级</h4>
           <select class="form-control select select-primary" data-toggle="select">
             <option value="0">Choose hero</option>
@@ -34,9 +34,8 @@
             <option value="4" selected>X-Men</option>
             <option value="5">Crocodile</option>
           </select>
-    </div> <!-- /.col-xs-3 -->
-	
-	<div class="col-xs-3">
+    </div> <!-- /.col-md-3 -->
+	<div class="col-md-3">
           <h4 class="demo-panel-title">课程</h4>
           <select class="form-control select select-primary" data-toggle="select">
             <option value="0">Choose hero</option>
@@ -46,8 +45,11 @@
             <option value="4" selected>X-Men</option>
             <option value="5">Crocodile</option>
           </select>
-    </div> <!-- /.col-xs-3 -->
-	
+    </div> <!-- /.col-md-3 -->
+	<div class="col-md-3">
+		<h4 class="demo-panel-title">搜索</h4>
+		<button type="button" class="btn btn-success">确定</button>
+	</div>
 </div>
 <script src="BackendStyle/js/jquery.min.js"></script>
 <script src="BackendStyle/js/bootstrap.min.js"></script>
