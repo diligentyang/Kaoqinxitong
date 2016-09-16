@@ -24,7 +24,9 @@ class Backend extends CI_Controller
 	//超级管理员界面
 	function super_index()
 	{
-		$this->load->view("Backend/super_index");
+		$this->load->model("Backmodel");
+		$data['grade']=$this->Backmodel->get_all_grade();
+		$this->load->view("Backend/super_index", $data);
 	}
 	
     //公告数据

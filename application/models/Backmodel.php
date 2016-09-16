@@ -147,5 +147,11 @@ class Backmodel extends CI_Model
         $query = $this->db->query("select * from present where sID='$stu_id' and sCourse='$sCourse'");
         return $query->result();
     }
+	
+	function get_all_grade()
+	{
+		$query = $this->db->query("select DISTINCT cGrade from course order by cGrade desc");
+		return $query->result();
+	}
 
 }

@@ -10,18 +10,14 @@
 	<link href="BackendStyle/css/flat-ui.css" rel="stylesheet">
 </head>
 <body>
-
 <div class="container">
 	<div class="col-md-3">
           <h4 class="demo-panel-title">年级</h4>
 		  <div class="form-group">
 			  <select class="form-control select select-primary" data-toggle="select">
-				<option value="0">Choose hero</option>
-				<option value="1">Spider Man</option>
-				<option value="2">Wolverine</option>
-				<option value="3">Captain America</option>
-				<option value="4" selected>X-Men</option>
-				<option value="5">Crocodile</option>
+				<?php foreach ($grade as $val) { ?>
+					<option value="<?php echo $val->cGrade;?>"><?php echo $val->cGrade;?></option>
+				<?php } ?>
 			  </select>
 		  </div>
     </div> <!-- /.col-md-3 -->
