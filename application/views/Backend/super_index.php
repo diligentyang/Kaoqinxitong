@@ -46,30 +46,9 @@
 		</div>
 	</div>
 	<input type="hidden" value="<?php echo site_url();?>" id="siteurl">
-	<table class="table table-hover" style="font-size:14px;">
-		<thead>
-			<tr>
-				<th>年级</th>
-				<th>班级</th>
-				<th>课程</th>
-				<th>学号</th>
-				<th>姓名</th>
-				<th>辅导员</th>
-				<th>缺课次数</th>
-			<tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th>2014</th>
-				<th>14-2</th>
-				<th>数据结构</th>
-				<th>1427152066</th>
-				<th>杨森源</th>
-				<th>姚莉</th>
-				<th><span class="badge" style="background:#D30D15;">4</span></th>
-			</tr>
-		</tbody>
-	</table>
+	<div id="res">
+		
+	</div>
 </div>
 
 
@@ -160,8 +139,7 @@ $("#commit").click(function(){
 	var site_url=$("#siteurl").val();
 	var url = site_url+"/Backend/get_stu_list";
 	$.post(url,{grade:grade,classname:classname,cName:cName},function(data) {
-            alert(data);
-            
+        $("#res").html(data);
     })
 })
 

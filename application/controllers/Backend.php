@@ -54,7 +54,7 @@ class Backend extends CI_Controller
 		$output='<table class="table table-hover" style="font-size:14px;">
 		<thead>
 			<tr>
-				<th>年级</th>
+				<th>序号</th>
 				<th>班级</th>
 				<th>课程</th>
 				<th>学号</th>
@@ -64,9 +64,26 @@ class Backend extends CI_Controller
 			<tr>
 		</thead>
 		<tbody>';
+		$n=1;
 		foreach ($data['arr'] as $val) {
-			$output.=$val->sID.$val->sName.$val->tName.$val->num.$classname.$cName.$grade;
+			$output.='<tr>
+				<th>'.$n.'</th>
+				<th>'.$classname.'</th>
+				<th>'.$cName.'</th>
+				<th>'.$val->sID.'</th>
+				<th>'.$val->sName.'</th>
+				<th>'.$val->tName.'</th>';
+				if($val->num){
+					$output.='<th><span class="badge" style="background:#D30D15;">'.$val->num.'</span></th>
+				</tr>';
+				}else{
+					$output.='<th><span class="badge" style="background:green;">'.$val->num.'</span></th>
+				</tr>';
+				}
+			$n++;	
 		}
+		$output.='</tbody>
+				</table>';
 		echo $output;
 	}
 	
