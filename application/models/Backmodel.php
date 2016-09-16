@@ -165,5 +165,19 @@ class Backmodel extends CI_Model
 		$query = $this->db->query("select cName from course where cGrade = '$grade' and cClass= '$classname'");
 		return $query->result();
 	}
+	
+	function getStuList($grade, $classname, $cName)
+	{
+		$query = $this->db->query("select id from course where cGrade = '$grade' and cClass= '$classname' and cName='$cName'");
+		$row=$query->row();
+		$courseID=$row->id;
+		$query = $this->db->query("
+				select a.sID,a.sName,tName,count(b.sDelDate) as num from (select * from student where sCourse = '$courseID' ) as a
+				left join (select * from present where sCourse = '$courseID') as b on a.sID=b.sID
+				left join tuser on a.sAssistant=tuser.tID GROUP BY a.sID ORDER BY a.sID;
+				");
+		return $query->result();		
+	}
+
 
 }

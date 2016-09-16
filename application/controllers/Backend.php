@@ -31,7 +31,6 @@ class Backend extends CI_Controller
 	
 	function get_all_class(){
 		$grade = $this->input->post("grade");
-		//$grade = $this->uri->segment(3);
 		$this->load->model("Backmodel");
 		$data=$this->Backmodel->getClassByGrade($grade);
 		echo json_encode($data);
@@ -47,7 +46,28 @@ class Backend extends CI_Controller
 	
 	function get_stu_list()
 	{
-		
+		$grade = $this->input->post("grade");
+		$classname = $this->input->post("classname");
+		$cName = $this->input->post("cName");
+		$this->load->model("Backmodel");
+		$data['arr']=$this->Backmodel->getStuList($grade, $classname, $cName);
+		$output='<table class="table table-hover" style="font-size:14px;">
+		<thead>
+			<tr>
+				<th>年级</th>
+				<th>班级</th>
+				<th>课程</th>
+				<th>学号</th>
+				<th>姓名</th>
+				<th>辅导员</th>
+				<th>缺课次数</th>
+			<tr>
+		</thead>
+		<tbody>';
+		foreach ($data['arr'] as $val) {
+			$output.=$val->sID.$val->sName.$val->tName.$val->num.$classname.$cName.$grade;
+		}
+		echo $output;
 	}
 	
     //公告数据
