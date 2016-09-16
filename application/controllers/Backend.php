@@ -45,6 +45,11 @@ class Backend extends CI_Controller
 		echo json_encode($data);
 	}
 	
+	function get_stu_list()
+	{
+		
+	}
+	
     //公告数据
     function commonData(){
         $data["tID"] = $this->session->userdata("tID");

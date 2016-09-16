@@ -58,7 +58,11 @@ $("#grade").change(function (){
 	var grade = $("#grade").find("option:selected").val();
 	if (grade=="年级") {
 		alert("请选择年级");
+		$("#cName").attr("disabled","disabled"); 
+		$("#commit").attr("disabled","disabled"); 
 	} else {
+		$("#cName").attr("disabled","disabled"); 
+		$("#commit").attr("disabled","disabled"); 
 		var site_url=$("#siteurl").val();
 		var url = site_url+"/Backend/get_all_class";
 		$.ajax({
@@ -88,6 +92,8 @@ $("#classname").change(function() {
 	var grade = $("#grade").find("option:selected").val();
 	if (classname=="班级") {
 		alert("请选择班级");
+		$("#cName").attr("disabled","disabled"); 
+		$("#commit").attr("disabled","disabled"); 
 	} else {
 		var site_url=$("#siteurl").val();
 		var url = site_url+"/Backend/get_all_course";
@@ -113,6 +119,27 @@ $("#classname").change(function() {
 	}
 })
 
+$("#cName").change(function() {
+	var cName = $("#cName").find("option:selected").val();
+	if (cName=="课程") {
+		alert("请选择课程");
+		$("#commit").attr("disabled","disabled"); 
+	} else {
+		$("#commit").removeAttr("disabled"); 
+	}
+})
+
+$("#commit").click(function(){
+	var grade = $("#grade").find("option:selected").val();
+	var classname = $("#classname").find("option:selected").val();
+	var cName = $("#cName").find("option:selected").val();
+	var site_url=$("#siteurl").val();
+	var url = site_url+"/Backend/get_stu_list";
+	$.post(url,{grade:grade,classname:classname,cName:cName},function(data) {
+            alert(data);
+            
+    })
+})
 
 
 </script>
