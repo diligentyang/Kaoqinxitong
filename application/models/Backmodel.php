@@ -153,5 +153,17 @@ class Backmodel extends CI_Model
 		$query = $this->db->query("select DISTINCT cGrade from course order by cGrade desc");
 		return $query->result();
 	}
+	
+	function getClassByGrade($grade)
+	{
+		$query = $this->db->query("select DISTINCT cClass from course where cGrade = '$grade'");
+		return $query->result();
+	}
+	
+	function getCourseByGradeClass($grade, $classname)
+	{
+		$query = $this->db->query("select cName from course where cGrade = '$grade' and cClass= '$classname'");
+		return $query->result();
+	}
 
 }

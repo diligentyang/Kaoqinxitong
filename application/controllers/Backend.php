@@ -30,7 +30,19 @@ class Backend extends CI_Controller
 	}
 	
 	function get_all_class(){
-		echo "111";
+		$grade = $this->input->post("grade");
+		//$grade = $this->uri->segment(3);
+		$this->load->model("Backmodel");
+		$data=$this->Backmodel->getClassByGrade($grade);
+		echo json_encode($data);
+	}
+	
+	function get_all_course(){
+		$grade = $this->input->post("grade");
+		$classname = $this->input->post("classname");
+		$this->load->model("Backmodel");
+		$data=$this->Backmodel->getCourseByGradeClass($grade, $classname);
+		echo json_encode($data);
 	}
 	
     //公告数据

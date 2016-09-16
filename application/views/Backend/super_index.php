@@ -26,23 +26,23 @@
 	<div class="col-md-3">
           <h4 class="demo-panel-title">班级</h4>
 		  <div class="form-group">
-			  <select class="form-control select select-primary" data-toggle="select" disabled>
-				
+			  <select class="form-control select select-primary" data-toggle="select" disabled id="classname">
+				<option value="班级">--班级--</option>
 			  </select>
 		  </div>
     </div> <!-- /.col-md-3 -->
 	<div class="col-md-3">
           <h4 class="demo-panel-title">课程</h4>
 		  <div class="form-group">
-			  <select class="form-control select select-primary" data-toggle="select" disabled>
-				
+			  <select class="form-control select select-primary" data-toggle="select" disabled id="cName">
+					<option value="课程">--课程--</option>
 			  </select>
 		  </div>
     </div> <!-- /.col-md-3 -->
 	<div class="col-md-2">
 		<h4 class="demo-panel-title">搜索</h4>
 		<div class="form-group">
-			<button type="button" class="btn btn-success btn-block" disabled>确定</button>
+			<button type="button" class="btn btn-success btn-block" disabled id="commit">确定</button>
 		</div>
 	</div>
 	<input type="hidden" value="<?php echo site_url();?>" id="siteurl">
@@ -61,7 +61,6 @@ $("#grade").change(function (){
 	} else {
 		var site_url=$("#siteurl").val();
 		var url = site_url+"/Backend/get_all_class";
-		alert(url);
 		$.ajax({
              url: url,  
              type: "POST",
@@ -72,11 +71,49 @@ $("#grade").change(function (){
                  alert('请求失败');  
              },  
              success: function(data,status){//如果调用php成功 
-                alert(data);
+				var output = "<option value='班级'>--班级--</option>";
+				for(var i=1;i<=data.length;i++){
+					output = output + "<option value='" +data[i-1].cClass+ "'>" + data[i-1].cClass + "</option>";
+				}
+				$("#classname").removeAttr("disabled"); 
+				$("#classname").empty();
+				$("#classname").append(output);
              }
         });
 	}
 })
+
+$("#classname").change(function() {
+	var classname = $("#classname").find("option:selected").val();
+	var grade = $("#grade").find("option:selected").val();
+	if (classname=="班级") {
+		alert("请选择班级");
+	} else {
+		var site_url=$("#siteurl").val();
+		var url = site_url+"/Backend/get_all_course";
+		$.ajax({
+             url: url,  
+             type: "POST",
+             data:{grade:grade,classname:classname},
+			 dataType: "json",
+			 async: false,
+             error: function(){  
+                 alert('请求失败');  
+             },  
+             success: function(data,status){//如果调用php成功 
+				var output = "<option value='课程'>--课程--</option>";
+				for(var i=1;i<=data.length;i++){
+					output = output + "<option value='" +data[i-1].cName+ "'>" + data[i-1].cName + "</option>";
+				}
+				$("#cName").removeAttr("disabled"); 
+				$("#cName").empty();
+				$("#cName").append(output);
+             }
+        });
+	}
+})
+
+
 
 </script>
 </body>
