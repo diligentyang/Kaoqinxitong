@@ -29,6 +29,10 @@ class Backend extends CI_Controller
 		$this->load->view("Backend/super_index", $data);
 	}
 	
+	function get_all_class(){
+		echo "111";
+	}
+	
     //公告数据
     function commonData(){
         $data["tID"] = $this->session->userdata("tID");
